@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #E1E1E1; /* Light text for dark background */
+    background-color: #191919; /* Dark background color */
+    background-image: radial-gradient(#57575741 1.35px, #191919 1.35px); /* Radial gradient pattern */
+    background-size: 25px 25px; /* Pattern size */
+    background-position: center; /* Center the pattern */
+    background-attachment: fixed; /* Fixed background */
+}
+
+/* Header and Navigation */
+header {
+    background: #303030af; /* Semi-transparent black for header */
+    color: #E1E1E1;
+    padding: 1rem 0;
+    position: fixed;
+    top: 10px; /* Add space from the top of the window */
+    left: 10px; /* Add space from the left of the window */
+    right: 10px; /* Add space from the right of the window */
+    border-radius: 50px; /* Rounded corners */
+    z-index: 1000;
+    margin: 0 10px; /* Add space around the navigation bar */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation links */
+    align-items: center;
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.logo a {
+    color: #E1E1E1;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #E1E1E1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color, scale, and underline */
+}
+
+nav ul li a:hover {
+    color: #abd8ff; /* Change text color on hover */
+    text-decoration: underline; /* Add underline */
+    text-underline-offset: 4px; /* Adjust the distance of the underline from the text */
+    transform: scale(1.1); /* Slightly scale up the text */
+}
+
+nav ul li a.active {
+    color: #abd8ff; /* Change text color on hover */
+    text-decoration: underline; /* Add underline */
+    text-underline-offset: 4px; /* Adjust the distance of the underline from the text */
+    transform: scale(1.1); /* Slightly scale up the text */
+}
+
+/* Landing Section */
+.landing-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Required for positioning the social icons */
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.landing-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.landing-content .btn {
+    padding: 0.8rem 2rem;
+    background: #303030af; /* Button color */
+    color: #E1E1E1;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.landing-content .btn:hover {
+    background: #6b6b6b; /* Slightly lighter color on hover */
+}
+
+.landing-social-icons {
+    position: absolute; /* Position the icons absolutely within the landing section */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.landing-social-icons a {
+    color: #E1E1E1; /* Light text for dark background */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.landing-social-icons a:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+/* About Section */
+.about-section {
+    background: #5e393900; /* Semi-transparent black for sections */
+    margin-top: 80px; /* Add margin to account for fixed header */
+    scroll-margin-top: 80px; /* Add scroll margin to account for fixed header */
+    height: calc(100vh - 80px); /* Full viewport height minus header height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 2rem; /* Space between image and text */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust image size as needed */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.about-text {
+    flex: 1;
+    text-align: center; /* Align text to the center */
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #E1E1E1; /* Light text for dark background */
+    text-align: justify;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background: #80808000; /* Semi-transparent black for sections */
+    border-radius: 8px;
+    margin-top: 60px; /* Add margin to account for fixed header */
+    scroll-margin-top: 20px; /* Add scroll margin to account for fixed header */
+}
+
+.projects-section h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Match About Me heading size */
+    margin-bottom: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: #303030af; /* Button color */
+    color: #E1E1E1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-btn.active {
+    background: #6b6b6b; /* Active button color */
+}
+
+.filter-btn:hover {
+    background: #6b6b6b; /* Slightly lighter color on hover */
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #303030af; /* Card background color */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.project-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.project-year {
+    font-size: 0.9rem;
+    color: #ccc; /* Lighter text for year */
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+    line-height: 1.5;
+}
+
+/* View More Button */
+.view-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-more-btn {
+    padding: 0.8rem 2rem;
+    background: #303030af; /* Button color */
+    color: #E1E1E1;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.view-more-btn:hover {
+    background: #6b6b6b; /* Slightly lighter color on hover */
+}
+
+/* Education Section */
+.education-section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background: #87878700; /* Semi-transparent black for sections */
+    border-radius: 8px;
+    margin-top: 60px; /* Add margin to account for fixed header */
+    scroll-margin-top: 20px; /* Add scroll margin to account for fixed header */
+}
+
+.education-section h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Match About Me heading size */
+    margin-bottom: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.education-card {
+    background: #303030af; /* Card background color */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.education-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.education-duration {
+    font-size: 0.9rem;
+    color: #ccc; /* Lighter text for duration */
+    margin-bottom: 0.5rem;
+}
+
+.education-description {
+    font-size: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem 0;
+    background: #88888800; /* Semi-transparent black for sections */
+    border-radius: 8px;
+    margin-top: 60px; /* Add margin to account for fixed header */
+    scroll-margin-top: 20px; /* Add scroll margin to account for fixed header */
+}
+
+.contact-section h1 {
+    font-size: 2.5rem; /* Match About Me heading size */
+    margin-bottom: 1rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+form input,
+form textarea,
+form button {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc43;
+    border-radius: 10px;
+    background: #303030af; /* Light semi-transparent background for inputs */
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+form button {
+    background: #303030af; /* Button color */
+    color: #E1E1E1;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 50px;
+}
+
+form button:hover {
+    background: #6b6b6b; /* Slightly lighter color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #E1E1E1; /* Light text for dark background */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+/* Footer */
+footer {
+    text-align: right;
+    color: #E1E1E1;
+    font-size: 1rem; 
+}
