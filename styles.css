@@ -94,7 +94,7 @@ nav ul li a.active {
 
 .landing-content .btn {
     padding: 0.8rem 2rem;
-    background: #303030af; /* Button color */
+    background: #303030; /* Button color */
     color: #E1E1E1;
     text-decoration: none;
     border-radius: 50px;
@@ -120,7 +120,7 @@ nav ul li a.active {
 }
 
 .landing-social-icons a:hover {
-    color: #ccc; /* Lighter color on hover */
+    color: #abd8ff; /* Lighter color on hover */
 }
 
 /* About Section */
@@ -151,7 +151,7 @@ nav ul li a.active {
 .about-image img {
     width: 100%;
     max-width: 500px; /* Adjust image size as needed */
-    border-radius: 10px; /* Rounded corners for the image */
+    border-radius: 20px; /* Rounded corners for the image */
 }
 
 .about-text {
@@ -197,7 +197,7 @@ nav ul li a.active {
 }
 
 .filter-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     background: #303030af; /* Button color */
     color: #E1E1E1;
     border: none;
@@ -268,8 +268,8 @@ nav ul li a.active {
 }
 
 .view-more-btn {
-    padding: 0.8rem 2rem;
-    background: #303030af; /* Button color */
+    padding: 0.2rem 2rem;
+    background: #303030; /* Button color */
     color: #E1E1E1;
     text-decoration: none;
     border-radius: 50px;
@@ -359,7 +359,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the form horizontally */
 }
 
 form label {
@@ -373,18 +373,20 @@ form button {
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #cccccc43;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #303030af; /* Light semi-transparent background for inputs */
     color: #E1E1E1; /* Light text for dark background */
 }
 
 form button {
-    background: #303030af; /* Button color */
+    background: #303030; /* Button color */
     color: #E1E1E1;
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
     border-radius: 50px;
+    min-width: 200px;
+    margin: 0 auto; /* Center the button horizontally */
 }
 
 form button:hover {
@@ -405,7 +407,7 @@ form button:hover {
 }
 
 .social-icons a:hover {
-    color: #ccc; /* Lighter color on hover */
+    color: #abd8ff; /* Lighter color on hover */
 }
 
 /* Footer */
