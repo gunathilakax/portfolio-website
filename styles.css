@@ -232,6 +232,12 @@ nav ul li a.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.project-card:hover h2,
+.project-card:hover p,
+.project-card:hover span {
+    color: #abd8ff; /* Change heading color on hover */
+}
+
 .project-image img {
     width: 100%;
     height: 200px; /* Fixed height for images */
