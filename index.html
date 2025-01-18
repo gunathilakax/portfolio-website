@@ -33,7 +33,7 @@
         <!-- Landing Section -->
         <section id="landing" class="landing-section">
             <div class="landing-content">
-                <h1>Hello, I'm Sithija Shehara</h1>
+                <h1>Hello,<br> <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div></h1>
                 <p>Designer & <span class="code-tag">&lt;Coder&gt;</span></p>
                 <!-- Download CV Button -->
                 <a href="assets/Sithija_Shehara.pdf" download="Sithija_Shehara.pdf" class="btn">Download CV</a>
@@ -66,38 +66,63 @@
             <h1>My Projects</h1>
             <!-- Filter Buttons -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all" aria-label="Show all projects">All</button>
-                <button class="filter-btn" data-filter="code" aria-label="Filter code projects">Code</button>
-                <button class="filter-btn" data-filter="design" aria-label="Filter design projects">Design</button>
+                <button class="filter-btn active" data-filter="all" aria-label="Show all projects">All Projects</button>
+                <button class="filter-btn" data-filter="code" aria-label="Filter code projects">Codeing Projects</button>
+                <button class="filter-btn" data-filter="design" aria-label="Filter design projects">Designing Projects</button>
             </div>
             <!-- Project Cards -->
             <div class="project-container">
-                <div class="project-card" data-category="code">
+                <!-- Project 1: Code -->
+                <div class="project-card" data-category="code design">
                     <div class="project-image">
                         <img src="assets/project1.jpg" alt="Bookmark Buddy Project" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h2>Bookmark Buddy</h2>
-                        <p class="project-year">2023</p>
+                        <p class="project-year">2024</p>
                         <p class="project-description">A web extension for efficient bookmark management with features like search, sorting, grid/list views, and dark mode.</p>
                     </div>
                 </div>
 
+                <!-- Project 2: Design -->
                 <div class="project-card" data-category="design">
                     <div class="project-image">
                         <img src="assets/project2.jpg" alt="UI/UX Redesign Project" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <h2>UI/UX Redesign</h2>
+                        <h2>Hutch CliQ UI Redesign</h2>
                         <p class="project-year">2023</p>
-                        <p class="project-description">Redesigned the user interface and experience for a mobile app to improve usability and aesthetics.</p>
+                        <p class="project-description">Redesigned the Hutch CliQ mobile app's user interface and experience for a mobile app to improve usability and aesthetics.</p>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
+
+                <!-- Project 3: Code and Design -->
+                <div class="project-card" data-category="code design">
+                    <div class="project-image">
+                        <img src="assets/project3.png" alt="Labs Reservation System" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h2>Lab and Lecture Hall Reservation System</h2>
+                        <p class="project-year">2024</p>
+                        <p class="project-description">A web-based system for efficient scheduling and reservation of labs and lecture halls.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Code -->
+                <div class="project-card" data-category="code">
+                    <div class="project-image">
+                        <img src="assets/project4.png" alt="Traffic Sign Recognition System" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h2>Traffic Sign Recognition System</h2>
+                        <p class="project-year">2024</p>
+                        <p class="project-description">This is an innovative solution aimed at enhancing road safety and driver awareness. This Arduino-based system integrates image processing, machine learning, and voice synthesis to recognize traffic signs, dynamically adjust vehicle speed, and provide voice instructions to drivers.</p>
+                    </div>
+                </div>
             </div>
             <!-- View More Button -->
             <div class="view-more-container">
-                <a href="projects.html" class="view-more-btn">View More</a>
+                <a href="#projects" class="view-more-btn">View More</a>
             </div>
         </section>
 
@@ -109,54 +134,73 @@
                 <div class="education-card">
                     <div class="education-info">
                         <h2>Bachelor of Information and Communication Technology (Honors)</h2>
+                        <p class="education-description">Specialized in Software Engineering<br>Faculty of Technology <br> University of Sri Jayewardenepura</p>
                         <p class="education-duration">2022 - Present</p>
-                        <p class="education-description">Specialized in Software Engineering<br>Faculty of Technology - University of Sri Jayewardenepura</p>
                     </div>
+                    <a href="https://www.sjp.ac.lk/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/japura.png" alt="University of Sri Jayewardenepura" loading="lazy">
+                    </a>
                 </div>
 
                 <!-- Education Card 2 -->
                 <div class="education-card">
                     <div class="education-info">
                         <h2>CS50's Introduction to Computer Science</h2>
-                        <p class="education-duration">2024</p>
                         <p class="education-description">Harvard University - edX</p>
+                        <p class="education-duration">2024</p>
                     </div>
+                    <a href="https://cs50.harvard.edu/certificates/e1e609c5-ee83-414c-b0e5-2f60b371a8b0" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/harvard.png" alt="Harvard University" loading="lazy"><br>
+                        <img src="assets/edx.png" alt="edX" loading="lazy">
+                    </a>
                 </div>
 
                 <!-- Education Card 3 -->
                 <div class="education-card">
                     <div class="education-info">
                         <h2>G.C.E. Advanced Level Examination</h2>
+                        <p class="education-description">Engineering Technology <br> 1A and 2Bs including ICT<br>Bandaranayake College - Gampaha</p>
                         <p class="education-duration">2018 - 2020</p>
-                        <p class="education-description">Engineering Technology - 1A and 2Bs including ICT<br>Bandaranayake College - Gampaha</p>
                     </div>
+                    <a href="https://www.bcg.lk/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/bc.png" alt="Bandaranayake College" loading="lazy">
+                    </a>
                 </div>
 
                 <!-- Education Card 4 -->
                 <div class="education-card">
                     <div class="education-info">
                         <h2>Certificate Course in Computer Application</h2>
-                        <p class="education-duration">2018</p>
                         <p class="education-description">Nenasala Education Center</p>
+                        <p class="education-duration">2018</p>
                     </div>
+                    <a href="https://nenasala.lk/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/nenasala.png" alt="nenasala" loading="lazy">
+                    </a>
                 </div>
 
                 <!-- Education Card 5 -->
                 <div class="education-card">
                     <div class="education-info">
                         <h2>Certificate Course in Graphic Design</h2>
-                        <p class="education-duration">2018</p>
                         <p class="education-description">Nenasala Education Center</p>
+                        <p class="education-duration">2018</p>
                     </div>
+                    <a href="https://nenasala.lk/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/nenasala.png" alt="nenasala" loading="lazy">
+                    </a>
                 </div>
 
                 <!-- Education Card 6 -->
                 <div class="education-card">
                     <div class="education-info">
                         <h2>G.C.E. Ordinary Level Examination</h2>
-                        <p class="education-duration">2012 - 2017</p>
                         <p class="education-description">9As for all subjects<br>Bandaranayake College - Gampaha</p>
+                        <p class="education-duration">2012 - 2017</p>
                     </div>
+                    <a href="https://www.bcg.lk/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/bc.png" alt="Bandaranayake College" loading="lazy">
+                    </a>
                 </div>
             </div>
         </section>

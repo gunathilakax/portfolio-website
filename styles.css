@@ -92,6 +92,32 @@ nav ul li a.active {
     margin-bottom: 2rem;
 }
 
+/* Typewriter Effect Styles */
+.console-container {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    color: #E1E1E1; /* Light text for dark background */
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+    color: #E1E1E1; /* Cursor color */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 .landing-content .btn {
     padding: 0.8rem 2rem;
     background: #303030; /* Button color */
@@ -313,6 +339,7 @@ nav ul li a.active {
 }
 
 .education-card {
+    text-align: center;
     background: #303030af; /* Card background color */
     border-radius: 20px;
     overflow: hidden;
@@ -323,6 +350,13 @@ nav ul li a.active {
 .education-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.education-card:hover h2,
+.education-card:hover h3,
+.education-card:hover p,
+.education-card:hover span {
+    color: #abd8ff;
 }
 
 .education-info h2 {
@@ -341,6 +375,12 @@ nav ul li a.active {
     font-size: 1rem;
     color: #E1E1E1; /* Light text for dark background */
     line-height: 1.5;
+}
+
+.education-card a img {
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: cover;
 }
 
 /* Contact Section */
@@ -393,6 +433,7 @@ form button {
     border-radius: 50px;
     min-width: 200px;
     margin: 0 auto; /* Center the button horizontally */
+    padding: 0.5rem 2rem; /* Add padding for better appearance */
 }
 
 form button:hover {
