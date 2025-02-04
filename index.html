@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/favicon.ico" sizes="32x32">
     <title>Sithija Shehara</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for Icons -->
@@ -17,6 +17,12 @@
             <div class="logo">
                 <a href="#landing" aria-label="Home">Sithija Shehara</a>
             </div>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <!-- Navigation Links -->
             <ul>
                 <li><a href="#landing">Home</a></li>
@@ -26,6 +32,16 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Full-screen Menu (below the navigation bar) -->
+        <div class="fullscreen-menu">
+            <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -75,24 +91,24 @@
                 <!-- Project 1: Code -->
                 <div class="project-card" data-category="code design">
                     <div class="project-image">
-                        <img src="assets/project1.jpg" alt="Bookmark Buddy Project" loading="lazy">
+                        <img src="assets/project1.png" alt="Bookmark Buddy Project" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h2>Bookmark Buddy</h2>
-                        <p class="project-year">2024</p>
-                        <p class="project-description">A web extension for efficient bookmark management with features like search, sorting, grid/list views, and dark mode.</p>
+                        <p class="project-year">2025</p>
+                        <p class="project-description">A feature-rich web browser extension designed to simplify bookmark management and enhance browsing productivity. Bookmark Buddy offers a responsive search bar, sorting options, customizable view modes, dark/light mode toggling, and full-screen functionality. Built with JavaScript, HTML, CSS, and the Chrome Bookmarks API, this project highlights my expertise in web development and UI/UX design.</p>
                     </div>
                 </div>
 
                 <!-- Project 2: Design -->
                 <div class="project-card" data-category="design">
                     <div class="project-image">
-                        <img src="assets/project2.jpg" alt="UI/UX Redesign Project" loading="lazy">
+                        <img src="assets/project2.png" alt="UI/UX Redesign Project" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h2>Hutch CliQ UI Redesign</h2>
                         <p class="project-year">2023</p>
-                        <p class="project-description">Redesigned the Hutch CliQ mobile app's user interface and experience for a mobile app to improve usability and aesthetics.</p>
+                        <p class="project-description">A redesign of the Hutch mobile app to enhance usability and modernize its design. Key improvements include enhanced usage visibility, simplified balance management, streamlined add-ons, and a unified navigation bar. The clean and modern layout ensures a seamless user experience while maintaining Hutch brand identity.</p>
                     </div>
                 </div>
 
@@ -104,7 +120,7 @@
                     <div class="project-info">
                         <h2>Lab and Lecture Hall Reservation System</h2>
                         <p class="project-year">2024</p>
-                        <p class="project-description">A web-based system for efficient scheduling and reservation of labs and lecture halls.</p>
+                        <p class="project-description">A web-based system designed to streamline the reservation of labs and lecture halls in Sri Lankan government universities. Lecturers can check availability and reserve resources online, reducing manual errors and optimizing resource utilization. This system enhances academic workflow and supports efficient management of university facilities.</p>
                     </div>
                 </div>
 
@@ -116,7 +132,31 @@
                     <div class="project-info">
                         <h2>Traffic Sign Recognition System</h2>
                         <p class="project-year">2024</p>
-                        <p class="project-description">This is an innovative solution aimed at enhancing road safety and driver awareness. This Arduino-based system integrates image processing, machine learning, and voice synthesis to recognize traffic signs, dynamically adjust vehicle speed, and provide voice instructions to drivers.</p>
+                        <p class="project-description">An Arduino-based system designed to recognize traffic signs, including speed limits, and dynamically adjust vehicle speed accordingly. The system also provides voice instructions to the driver, explaining the meaning of each detected sign. By integrating image processing with Arduino, this project enhances road safety and driver awareness.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5: Code -->
+                <div class="project-card" data-category="code">
+                    <div class="project-image">
+                        <img src="assets/project5.png" alt="EduPara Advertising Website" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h2>EduPara</h2>
+                        <p class="project-year">2023</p>
+                        <p class="project-description">EduPara is an innovative online platform connecting educators, students, and institutes. Teachers showcase their expertise through targeted ads, while students explore diverse profiles and classes. Institutes promote programs to a targeted audience, enhancing visibility and enrollment. Designed to foster a dynamic learning community.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6: Code -->
+                <div class="project-card" data-category="code">
+                    <div class="project-image">
+                        <img src="assets/project6.png" alt="Facial Expression Recognition System" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h2>Facial Expression Recognition System</h2>
+                        <p class="project-year">2022</p>
+                        <p class="project-description">A machine learning-based system designed to interpret human emotions through facial expression recognition. By analyzing facial features like eyes, eyebrows, nose, and mouth, the system identifies emotions such as happiness, sadness, and anger. This project leverages advanced algorithms and data preprocessing techniques to bridge the gap between human emotions and machine understanding.</p>
                     </div>
                 </div>
             </div>
@@ -237,9 +277,5 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    <script>
-        // Update footer year dynamically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

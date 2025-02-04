@@ -8,9 +8,8 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Function to create the typewriter effect
-function consoleText(words, id, colors) {
-    if (colors === undefined) colors = ['#E1E1E1']; // Default text color
+// Typewriter effect
+function consoleText(words, id, colors = ['#E1E1E1']) {
     let visible = true;
     let con = document.getElementById('console');
     let letterCount = 1;
@@ -19,11 +18,11 @@ function consoleText(words, id, colors) {
     let target = document.getElementById(id);
     target.setAttribute('style', 'color:' + colors[0]);
 
-    window.setInterval(function () {
-        if (letterCount === 0 && waiting === false) {
+    window.setInterval(() => {
+        if (letterCount === 0 && !waiting) {
             waiting = true;
             target.innerHTML = words[0].substring(0, letterCount);
-            window.setTimeout(function () {
+            setTimeout(() => {
                 let usedColor = colors.shift();
                 colors.push(usedColor);
                 let usedWord = words.shift();
@@ -32,78 +31,80 @@ function consoleText(words, id, colors) {
                 target.setAttribute('style', 'color:' + colors[0]);
                 letterCount += x;
                 waiting = false;
-            }, 1000); // Delay before starting the next word
-        } else if (letterCount === words[0].length + 1 && waiting === false) {
+            }, 1000);
+        } else if (letterCount === words[0].length + 1 && !waiting) {
             waiting = true;
-            window.setTimeout(function () {
+            setTimeout(() => {
                 x = -1;
                 letterCount += x;
                 waiting = false;
-            }, 2000); // Delay before deleting the word
-        } else if (waiting === false) {
+            }, 2000);
+        } else if (!waiting) {
             target.innerHTML = words[0].substring(0, letterCount);
             letterCount += x;
         }
-    }, 120); // Typing speed (milliseconds per character)
+    }, 120);
 
-    window.setInterval(function () {
-        if (visible === true) {
-            con.className = 'console-underscore hidden';
-            visible = false;
-        } else {
-            con.className = 'console-underscore';
-            visible = true;
-        }
-    }, 400); // Cursor blink speed
+    window.setInterval(() => {
+        con.className = visible ? 'console-underscore hidden' : 'console-underscore';
+        visible = !visible;
+    }, 400);
 }
 
-// Initialize the typewriter effect
-consoleText(["I'm Sithija Shehara"], 'text', ['#E1E1E1']);
-
-
+consoleText(["I'm Sithija Shehara"], 'text');
 
 // Filter Projects
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".project-card");
 
     filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remove active class from all buttons
+        button.addEventListener("click", () => {
             filterButtons.forEach(btn => btn.classList.remove("active"));
-            // Add active class to the clicked button
-            this.classList.add("active");
+            button.classList.add("active");
 
-            const filter = this.getAttribute("data-filter");
+            const filter = button.getAttribute("data-filter");
 
-            // Show/hide projects based on the filter
             projectCards.forEach(card => {
                 const categories = card.getAttribute("data-category").split(" ");
-                if (filter === "all" || categories.includes(filter)) {
-                    card.style.display = "block"; // Show the project
-                } else {
-                    card.style.display = "none"; // Hide the project
-                }
+                card.style.display = (filter === "all" || categories.includes(filter)) ? "block" : "none";
             });
         });
     });
 
-
-    // Open project in a new window when clicked
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
-            window.open('#', '_blank'); // Replace '#' with the project link
+            window.open('#', '_blank');
         });
     });
+
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav ul li a");
+// Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector('.hamburger');
+    const fullscreenMenu = document.querySelector('.fullscreen-menu');
+    const header = document.querySelector('header');
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            navLinks.forEach(nav => nav.classList.remove("active")); // Remove active class from all links
-            this.classList.add("active"); // Add active class to the clicked link
+    hamburger.addEventListener('click', () => {
+        fullscreenMenu.classList.toggle('active');
+        header.classList.toggle('active'); // Add this line to toggle the header background
+    });
+
+    // Close fullscreen menu when a link is clicked
+    fullscreenMenu.querySelectorAll('ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            fullscreenMenu.classList.remove('active');
+            header.classList.remove('active'); // Add this line to remove the header background
         });
     });
 });
