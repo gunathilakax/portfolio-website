@@ -6,7 +6,6 @@ Welcome to my personal portfolio website! This platform showcases my professiona
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Demo](#demo)
 - [Deployment](#deployment)
 - [Contact](#contact)
 
@@ -21,16 +20,13 @@ Welcome to my personal portfolio website! This platform showcases my professiona
 - **Design:** Custom animations and styling for an engaging user experience
 - **Hosting:** GitHub Pages
 
-## Demo
-Check out the live demo of the portfolio website [here](https://gunathilakax.github.io/portfolio-website).
-
 ## Deployment
 The website is live and accessible at: [Portfolio Website](https://gunathilakax.github.io/portfolio-website)
 
 ## Contact
 Feel free to connect with me:
-- **Email:** [your.email@example.com](mailto:s.sheharagunathilaka@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/sithijagunathilaka)
+- **Email:** [s.sheharagunathilaka@gmail.com](mailto:s.sheharagunathilaka@gmail.com)
+- **LinkedIn:** [sithijagunathilaka](https://linkedin.com/in/sithijagunathilaka)
 - **GitHub:** [@gunathilakax](https://github.com/gunathilakax)
 
 ---
