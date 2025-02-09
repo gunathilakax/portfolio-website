@@ -1,6 +1,5 @@
 # Portfolio Website
 
-## Description
 Welcome to my personal portfolio website! This platform showcases my professional journey, projects, and educational background. It serves as a digital space to connect with potential collaborators, employers, and peers.
 
 ## Table of Contents
